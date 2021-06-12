@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>RegistrationForm_v7 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="static/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/css/style.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				{% if profit %}
+					<p style='font-size: 25px;'>Predicted car price is: <span style='color: #a4f773;'><b>{{ profit }}</b></span> USD</p>
+				{% endif %}
+				<form action="/predict" method='GET'>
+					<h3>Car price prediction</h3>
+					<p>This page is for predicting the price of your used car </p>
+					<br>
+					<label class="form-group">
+						<input type="number" class="form-control"  name="Year">
+						<span>Year</span>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>manufacturer</span>
+						<select name="manufacturer">
+							<option value="chevrolet">chevrolet</option>
+							<option value="ford">ford</option>
+							<option value="toyota">toyota</option>
+							<option value="honda">honda</option>
+							<option value="nissan">nissan</option>
+							<option value="jeep">jeep</option>
+							<option value="gmc">gmc</option>
+							<option value="ram">ram</option>
+							<option value="bmw">bmw</option>
+							<option value="dodge">dodge</option>
+							<option value="hyundai">hyundai</option>
+							<option value="mercedes-benz">mercedes-benz</option>
+							<option value="subaru">subaru</option>
+							<option value="volkswagen">volkswagen</option>
+							<option value="lexus">lexus</option>
+							<option value="kia">kia</option>
+							<option value="audi">audi</option>
+							<option value="cadillac">cadillac</option>
+							<option value="chrysler">chrysler</option>
+							<option value="acura">acura</option>
+							<option value="mazda">mazda</option>
+							<option value="buick ">buick</option>
+							<option value="infiniti">infiniti</option>
+							<option value="lincoln">lincoln</option>
+							<option value="volvo">volvo</option>
+							<option value="mitsubishi">mitsubishi</option>
+							<option value="pontiac">pontiac</option>
+							<option value="mini">mini</option>
+							<option value="jaguar">jaguar</option>
+							<option value="rover">rover</option>
+							<option value="mercury">mercury</option>
+							<option value="saturn">saturn</option>
+							<option value="porsche">porsche</option>
+							<option value="alfa-romeo">alfa-romeo</option>
+							<option value="fiat">fiat</option>
+							<option value="tesla">tesla</option>
+							<option value="harley-davidson">harley-davidson</option>
+							<option value="datsun">datsun</option>
+							<option value="land rover">land rover</option>
+							<option value="ferrari">ferrari</option>
+							<option value="aston-martin">aston-martin</option>
+							<option value="morgan">morgan</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<input type="text" class="form-control"  name="model">
+						<span>model</span>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>condition</span>
+						<select name="condition">
+							<option value="good">good</option>
+							<option value="excellent">excellent</option>
+							<option value="like new">like new</option>
+							<option value="fair">fair</option>
+							<option value="new">new</option>
+							<option value="salvage">salvage</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>cylinders</span>
+						<select name="cylinders">
+							<option value="3 cylinders">3 cylinders</option>
+							<option value="4 cylinders">4 cylinders</option>
+							<option value="5 cylinders">5 cylinders</option>
+							<option value="6 cylinders">6 cylinders</option>
+							<option value="8 cylinders">8 cylinders</option>
+							<option value="10 cylinders">10 cylinders</option>
+							<option value="12 cylinders">12 cylinders</option>
+							<option value="other">other</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>fuel</span>
+						<select name="fuel">
+							<option value="gas">gas</option>
+							<option value="diesel">diesel</option>
+							<option value="hyprid">hyprid</option>
+							<option value="electric">electric</option>
+							<option value="other">other</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<input type="text" class="form-control"  name="odometer">
+						<span>odometer</span>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>Title status</span>
+						<select name="Title_status">
+							<option value="clean">clean</option>
+							<option value="rebuilt">rebuilt</option>
+							<option value="salvage">salvage</option>
+							<option value="missing">missing</option>
+							<option value="parts only">parts only</option>
+							<option value="lien">lien</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>transmission</span>
+						<select name="transmission">
+							<option value="automatic">automatic</option>
+							<option value="manual">manual</option>
+							<option value="other">other</option>
+			
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>drive</span>
+						<select name="drive">
+							<option value="4wd">4wd</option>
+							<option value="fwd">fwd</option>
+							<option value="rwd">rwd</option>
+						</select>
+					</label>
+					<br>
+					
+					<br>
+					<label class="form-group">
+						<span>size</span>
+						<select name="size">
+							<option value="full-size">full-size</option>
+							<option value="mid-size">mid-size</option>
+							<option value="compact">compact</option>
+							<option value="sub-compact">sub-compact</option>
+
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						<span>type</span>
+						<select name="type">
+							<option value="sedan">sedan</option>
+							<option value="SUV">SUV</option>
+							<option value="pickup">pickup</option>
+							<option value="truck">truck</option>
+							<option value="other ">other</option>
+							<option value="coupe">coupe</option>
+							<option value="hatchback">hatchback</option>
+							<option value="wagon">wagon</option>
+							<option value="van">van</option>
+							<option value="convertible">convertible</option>
+							<option value="mini-van">mini-van</option>
+							<option value="offroad">offroadt</option>
+							<option value="bus">bus</option>
+						</select>
+					</label>
+					<br>
+					<br>
+					<label class="form-group">
+						
+						<span>paint</span>
+						<select name="paint">
+							<option value="white">white</option>
+							<option value="black">black</option>
+							<option value="silver">silver</option>
+							<option value="blue">blue</option>
+							<option value="red ">red</option>
+							<option value="grey">grey</option>
+							<option value="green">green</option>
+							<option value="brown">brown</option>
+							<option value="custom">custom</option>
+							<option value="yellow">yellow</option>
+							<option value="orange">orange</option>
+							<option value="purple">purple</option>						</select>
+					</label>
+					<br>
+					<button type='submit'>predict 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+		
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
